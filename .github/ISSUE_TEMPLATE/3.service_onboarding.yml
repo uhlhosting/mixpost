@@ -1,9 +1,84 @@
-name: Collect all important information about service onboarding
-description: Collection of all necessary information for the onboarding of a service to Mixpost.
-labels: question
+name: Service Onboarding
+description: Use this template for onboarding a new social media platform or service to Mixpost.
+labels: ["service-onboarding", "integration"]
 body:
+  - type: markdown
+    attributes:
+      value: "## Service Onboarding for Mixpost\nThank you for helping us integrate new services into Mixpost. Please provide as much detail as possible to ensure a smooth onboarding process."
+
   - type: textarea
     attributes:
-      label: Detailed description
+      label: Service Name
+      description: "What is the name of the social media platform or service you're integrating?"
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Detailed Description
+      description: "Provide a detailed description of the service and how it will enhance Mixpost functionalities."
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: API Integration Details
+      description: "Describe the API integration points, including authentication methods, rate limits, and data formats."
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: User Authentication Method
+      description: "Detail the user authentication method (e.g., OAuth, API keys) for accessing the service."
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Data Handling and Privacy Considerations
+      description: "Explain how data will be handled and stored, including any privacy considerations and compliance with regulations (e.g., GDPR, CCPA)."
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Dependencies and External Services
+      description: "List any external services or dependencies required for this integration."
     validations:
       required: false
+
+  - type: input
+    attributes:
+      label: Expected Traffic/Load
+      description: "Provide an estimate of the expected traffic/load on this service."
+      placeholder: "e.g., 10K API calls/day"
+    validations:
+      required: false
+
+  - type: checkboxes
+    attributes:
+      label: Required Features
+      description: "Select any features required for the service."
+      options:
+        - label: Post Scheduling
+        - label: Analytics Reporting
+        - label: Content Management
+        - label: User Interaction Tracking
+        - label: Multi-Account Management
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Testing and Validation
+      description: "Describe the testing and validation procedures to ensure the integration works as expected."
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Contact Person
+      description: "Who is the primary contact for this service integration? Please include an email address."
+    validations:
+      required: true
