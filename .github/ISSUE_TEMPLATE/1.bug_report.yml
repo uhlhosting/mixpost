@@ -1,54 +1,71 @@
 name: Bug Report
-description: If something isn't working as expected
+description: Use this form to report issues in Mixpost where something isn't working as expected.
 labels: bug
 body:
   - type: markdown
     attributes:
       value: |
-        Make sure that you are submitting a new bug that was not previously reported or already fixed.
+        **Thank you for reporting a bug.** Before submitting, please make sure that you are submitting a new bug that was not previously reported or already fixed.
+        
+        Use a concise and distinct title for the issue to help us identify and address it promptly.
 
-        Please use a concise and distinct title for the issue.
   - type: textarea
     attributes:
-      label: Steps to reproduce the problem
-      description: What were you trying to do?
-      value: |
-        1.
-        2.
-        3.
-        ...
+      label: Steps to Reproduce the Problem
+      description: What actions were you performing when the issue occurred? Please provide step-by-step instructions.
+      placeholder: "1.\n2.\n3.\n..."
     validations:
       required: true
+
   - type: input
     attributes:
-      label: Expected behaviour
-      description: What should have happened?
+      label: Expected Behavior
+      description: Describe what you expected to happen.
     validations:
       required: true
+
   - type: input
     attributes:
-      label: Actual behaviour
-      description: What happened?
+      label: Actual Behavior
+      description: Describe what actually happened instead.
     validations:
       required: true
+
   - type: textarea
     attributes:
-      label: Detailed description
+      label: Detailed Description
+      description: Provide any additional information that might be relevant to this issue.
     validations:
       required: false
+
   - type: textarea
     attributes:
       label: Specifications
       description: |
-        What version or commit hash of Mixpost did you find this bug in?
-
-        If a front-end issue, what browser and operating systems were you using?
+        Please specify the version or commit hash of Mixpost where you encountered the bug. Also, include details about your environment such as the browser and operating system.
       placeholder: |
-        Mixpost 1.0.2
+        Mixpost version: 1.0.2
+        
+        Browser: Google Chrome 106.0.5249.119, Firefox 105.0.3
+        
+        Operating System: Windows 10, macOS Monterey
+    validations:
+      required: true
 
-        Google Chrome 106.0.5249.119
-        Firefox 105.0.3
+  - type: textarea
+    attributes:
+      label: Error Messages and Logs
+      description: Include any error messages, stack traces, or relevant logs to help diagnose the problem.
+      placeholder: "Error message or log snippet..."
+    validations:
+      required: false
 
-        etc...
+  - type: checkboxes
+    attributes:
+      label: Confirmation
+      description: Confirm that you have attempted basic troubleshooting steps and checked that the issue has not already been reported.
+      options:
+        - label: I have searched the existing issues and confirm that this is a new and unresolved bug.
+        - label: I have tried to resolve the issue by restarting Mixpost/reproducing the issue with different data or configurations.
     validations:
       required: true

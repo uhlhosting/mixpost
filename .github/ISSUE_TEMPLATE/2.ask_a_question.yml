@@ -1,9 +1,72 @@
-name: Ask a question
-description: Ask the community for help
+name: Ask a Question
+description: Have a question or need help with Mixpost? Ask the community here.
 labels: question
 body:
+  - type: markdown
+    attributes:
+      value: |
+        **Before asking your question**, please make sure to search through the documentation and existing issues to avoid duplication. If you haven't found your answer, please provide as much detail as possible to help the community understand and answer your question.
+
   - type: textarea
     attributes:
-      label: Detailed description
+      label: Your Question
+      description: Clearly state your question or the problem you're facing.
+      placeholder: "What is your question?"
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: What have you tried so far?
+      description: Describe what you have tried to solve your question or problem.
+      placeholder: "I've tried..."
     validations:
       required: false
+
+  - type: textarea
+    attributes:
+      label: Expected Outcome
+      description: Describe what you are trying to achieve or the outcome you were expecting.
+      placeholder: "I expected..."
+    validations:
+      required: false
+
+  - type: textarea
+    attributes:
+      label: Relevant Details
+      description: Provide any relevant details such as error messages, environment (e.g., browser, OS), Mixpost version, etc.
+      placeholder: "Error messages, environment details, version..."
+    validations:
+      required: false
+
+  - type: textarea
+    attributes:
+      label: Attachments
+      description: If applicable, add screenshots or other attachments to help explain your question. Please ensure any sensitive information is redacted.
+      placeholder: "Attach any relevant files or screenshots."
+    validations:
+      required: false
+
+  - type: dropdown
+    attributes:
+      label: Category
+      description: Choose a category that best fits your question.
+      options:
+        - Documentation
+        - Installation and Setup
+        - Feature Usage
+        - Integration and APIs
+        - Troubleshooting and Errors
+        - Other
+    validations:
+      required: true
+
+  - type: checkboxes
+    attributes:
+      label: Acknowledgement
+      description: Please confirm the following before submitting your question.
+      options:
+        - label: I have searched existing questions and documentation and have not found an answer.
+        - label: I understand that my question will be answered by the community, and response times may vary.
+    validations:
+      required: true

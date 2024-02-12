@@ -1,5 +1,32 @@
 blank_issues_enabled: false
+
+# Provide multiple contact links for different types of inquiries or reports
 contact_links:
-  - name: Report a security issue
+  - name: Report a Security Vulnerability
     url: https://github.com/inovector/mixpost/security/policy
-    about: Learn how to notify us for sensitive bugs
+    about: Please report security vulnerabilities through our security policy page.
+
+  - name: Ask a Question or Discuss
+    url: https://github.com/inovector/mixpost/discussions
+    about: Have a question or want to discuss something? Use our Discussions page!
+
+  - name: Feature Requests
+    url: https://github.com/inovector/mixpost/issues/new?assignees=&labels=feature-request&template=feature_request.yml
+    about: Interested in requesting a feature? Let us know by filing a feature request.
+
+  - name: General Support or Help
+    url: https://stackoverflow.com/questions/tagged/mixpost
+    about: Need help or support with Mixpost? Ask your question on Stack Overflow tagged with 'mixpost'.
+
+  - name: Documentation Feedback
+    url: https://github.com/inovector/mixpost/issues/new?assignees=&labels=documentation&template=documentation_feedback.yml
+    about: Have feedback on our documentation? We'd love to hear it. Please provide your feedback through a documentation feedback issue.
+
+# Example for redirecting users for specific inquiries
+issue_redirects:
+  - name: Technical Support Queries
+    about: For technical support queries, please use our support forum instead.
+    url: https://support.mixpost.com
+
+# Optionally, provide a fallback option for users who cannot find a suitable template
+fallback_issue_template: other_issue_template.yml

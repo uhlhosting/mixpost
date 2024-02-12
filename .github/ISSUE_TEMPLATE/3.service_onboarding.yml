@@ -82,3 +82,14 @@ body:
       description: "Who is the primary contact for this service integration? Please include an email address."
     validations:
       required: true
+
+  - type: checkboxes
+    attributes:
+      label: Confirmation
+      description: Please confirm the following before submitting your service onboarding request.
+      options:
+        - label: I have reviewed the existing services and integrations within Mixpost to ensure this service does not duplicate existing functionalities.
+        - label: I have gathered all necessary information, including API documentation, security requirements, and data handling procedures, to facilitate a smooth onboarding process.
+        - label: I understand that onboarding a new service requires thorough review and testing and commit to providing any additional information or assistance as needed.
+    validations:
+      required: true
